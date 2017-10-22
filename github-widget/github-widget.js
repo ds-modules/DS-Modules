@@ -21,6 +21,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
 
   makeWidget = function(payload, div) {
     var i, len, limit, made, opts, ref, ref1, repo, results, siteRepoNames, sortBy, user;
+
     make({
       cls: 'gw-clearer',
       prevSib: div
@@ -41,14 +42,22 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
       }
     });
     results = [];
+
     for (i = 0, len = ref.length; i < len; i++) {
       repo = ref[i];
-      //This part should disable showing forked repos or repos with no description. 
+      //This part should disable showing forked repos or repos with no description.
       /* if ((!opts.forks && repo.fork) || (ref1 = repo.name.toLowerCase(), indexOf.call(siteRepoNames, ref1) >= 0) || !repo.description) {
         continue;
       } */
       if (made++ === limit) {
         break;
+      }
+      //Inserted this part to remove the ugly null that shows up if it doesn't have a description. 
+      var description;
+      if (repo.description == null) {
+        description = 'No description available.';
+      } else {
+        description = repo.description;
       }
       results.push(make({
         parent: div,
@@ -86,7 +95,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                 text: repo.language
               }) : void 0, make({
                 cls: 'gw-repo-desc',
-                text: repo.description
+                text: description
               })
             ]
           })
