@@ -71,7 +71,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                     kids: [
                         make({
                             tag: 'img',
-                            src: '/images/placeholder/pic01.jpg'
+                            src: 'images/placeholder/pic01.jpg'
                         })
                     ]
                 }),
