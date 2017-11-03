@@ -53,16 +53,18 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
       if (made++ === limit) {
         break;
       }
-      //Inserted this part to remove the ugly null that shows up if it doesn't have a description. 
+      //Inserted this part to remove the ugly null that shows up if it doesn't have a description.
       var description;
       if (repo.description == null) {
         description = 'No description available.';
       } else {
         description = repo.description;
       }
+      var randomStyle = (Math.floor(Math.random() * 3) + 1).toString();
+      var randomImg = (Math.floor(Math.random() * 9) + 1).toString();
         results.push(make({
             parent: div,
-            cls: 'style1',
+            cls: 'style' + randomStyle,
             tag: 'article',
             kids: [
                 make({
@@ -71,7 +73,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                     kids: [
                         make({
                             tag: 'img',
-                            src: '/images/placeholder/pic01.jpg'
+                            src: 'images/placeholder/pic0' + randomImg + '.jpg'
                         })
                     ]
                 }),
@@ -85,7 +87,12 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                         }),
                         make({
                             cls: 'content',
-                            text: description
+                            kids: [
+                              make({
+                                tag: 'p',
+                                text: description
+                              })
+                            ]
                         })
                     ]
                 })
@@ -94,12 +101,12 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
     }
       return results;
   };
-    
+
   init = function() {
     var div, i, len, ref, results;
     ref = get({
-      tag: 'div',
-      cls: 'github-widget'
+      tag: 'section',
+      cls: 'tiles'
     });
     results = [];
     for (i = 0, len = ref.length; i < len; i++) {

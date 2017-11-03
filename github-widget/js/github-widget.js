@@ -53,7 +53,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
       if (made++ === limit) {
         break;
       }
-      //Inserted this part to remove the ugly null that shows up if it doesn't have a description. 
+      //Inserted this part to remove the ugly null that shows up if it doesn't have a description.
       var description;
       if (repo.description == null) {
         description = 'No description available.';
@@ -61,9 +61,8 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
         description = repo.description;
       }
         results.push(make({
-            parent: div,
-            cls: 'style1',
-            tag: 'article',
+            parent: article,
+            cls: 'style2',
             kids: [
                 make({
                     tag: 'span',
@@ -84,8 +83,24 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                             text: repo.name
                         }),
                         make({
+                            tag: 'div',
                             cls: 'content',
                             text: description
+                            kids: [
+                              make({
+                                tag: 'ul',
+                                cls: 'gw-stats',
+                                kids: [
+                                  make({
+                                    tag: 'li',
+                                    text: repo.watchers,
+                                    cls: 'gw-watchers'
+                                  }), make({
+                                    tag: 'li',
+                                    text: repo.forks,
+                                    cls: 'gw-forks'
+                                  })
+                            ]
                         })
                     ]
                 })
@@ -94,12 +109,12 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
     }
       return results;
   };
-    
+
   init = function() {
     var div, i, len, ref, results;
     ref = get({
-      tag: 'div',
-      cls: 'github-widget'
+      tag: 'section',
+      cls: 'tiles'
     });
     results = [];
     for (i = 0, len = ref.length; i < len; i++) {
