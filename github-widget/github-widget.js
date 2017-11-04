@@ -45,7 +45,17 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
     results = [];
 
     for (i = 0, len = ref.length; i < len; i++) {
-      repo = ref[i];
+        repo = ref[i];
+
+        switch (repo.name) {
+        case 'DS-Modules':
+        case 'core-resources':
+        case 'Module-Feedback':
+            continue;
+        }
+
+        
+        
       //This part should disable showing forked repos or repos with no description.
       /* if ((!opts.forks && repo.fork) || (ref1 = repo.name.toLowerCase(), indexOf.call(siteRepoNames, ref1) >= 0) || !repo.description) {
         continue;
@@ -60,8 +70,12 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
       } else {
         description = repo.description;
       }
-      var randomStyle = (Math.floor(Math.random() * 3) + 1).toString();
-      var randomImg = (Math.floor(Math.random() * 9) + 1).toString();
+        var randomStyle = (Math.floor(Math.random() * 6) + 1).toString();
+        var randomIdx = Math.floor(Math.random() * 12) + 1
+        var randomImg;
+        if (randomIdx > 9) {randomImg = randomIdx.toString()}
+        else {randomImg = '0' + randomIdx.toString()}
+        
         results.push(make({
             parent: div,
             cls: 'style' + randomStyle,
@@ -73,7 +87,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                     kids: [
                         make({
                             tag: 'img',
-                            src: 'images/placeholder/pic0' + randomImg + '.jpg'
+                            src: 'images/placeholder/pic' + randomImg + '.jpg'
                         })
                     ]
                 }),

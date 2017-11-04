@@ -1720,11 +1720,11 @@
 		}
 
 	h2, h3, h4, h5, h6 {
-		font-weight: 900;
-		line-height: 1.5;
+		font-weight: 500;
+		line-height: 1.8;
 		margin: 0 0 2em 0;
-		text-transform: uppercase;
-		letter-spacing: 0.35em;
+        text-transform: uppercase;
+		letter-spacing: 0.15em;
 	}
 
 		h2 a, h3 a, h4 a, h5 a, h6 a {
