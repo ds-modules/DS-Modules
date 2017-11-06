@@ -23,7 +23,11 @@
 
 }
 
-.gw-watchers, .gw-forks {
+svg {
+  -webkit-backface-visibility: hidden;
+}
+
+.gw-watchers, .gw-forks, .gw-stars {
   padding-left: 0;
   text-align: center;
   margin: auto;
