@@ -89,7 +89,7 @@ Released under the MIT licence: http://opensource.org/licenses/mit-license
                         kids: [
                             make({
                                 tag: 'img',
-                                src: 'images/placeholder/pic' + randomImg + '.jpg'
+                                src: 'images/pic' + randomImg + '.jpg'
                             })
                         ]
                     }),
