@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="w-100 h-100">
+
+{% include head.html %}
+
+<body class="w-100 h-100">
+
+	<!-- Github Widget CSS -->
+	<link href="/static/stylesheets/github-widget.css" rel="stylesheet" type="text/css"/>
+	
+	{% include navbar.html %}
+
+	<!-- Content -->
+	<div class="row w-100 mt-5 px-5 justify-content-md-center">
+		<div class="col-md-offset-2 col-md-8 mt-5">
+			<h1 class="display-4 my-5">
+				{{ page.subtitle }}
+			</h1>
+			<p class="my-5">
+				{{page.content | markdownify}}
+			</p>
+			<div class="github-widget mt-5" data-user="ds-modules" data-options='{"sortBy":"pushed_at"}'></div>
+		</div>
+	</div>
+	<!-- End Content -->
+
+	{% include footer.html %}
+
+	<!-- Custom JS -->
+	<script src="/static/javascripts/github-widget.min.js"></script>
+</body>
+</html>
