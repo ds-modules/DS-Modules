@@ -46,41 +46,41 @@
 						<a 
 							class="btn btn-primary"
 							tabindex="0" 
-							role="button" 
-							data-toggle="popover"
-							data-trigger="focus" 
-							title="Github" 
-							data-content="And here's some amazing content. It's very engaging. Right?">
+							{% if module.github_link %}
+								href="{{module.github_link}}"
+							{% else %}
+								href="javascript:alert('No Github link!')"
+							{% endif %}>
 							<i class="fab fa-github"></i> Github
 						</a>
 						<a 
 							class="btn btn-primary" 
 							tabindex="0"
-							role="button" 
-							data-toggle="popover" 
-							data-trigger="focus" 
-							title="Github" 
-							data-content="And here's some amazing content. It's very engaging. Right?">
+							{% if module.datahub_link %}
+								href="{{module.datahub_link}}"
+							{% else %}
+								href="javascript:alert('No Datahub link!')"
+							{% endif %}>
 							<i class="fas fa-database"></i> Datahub
 						</a>
 						<a 
 							class="btn btn-primary" 
 							tabindex="0"
-							role="button" 
-							data-toggle="popover" 
-							data-trigger="focus" 
-							title="Github" 
-							data-content="And here's some amazing content. It's very engaging. Right?">
+							{% if module.nbviewer_link %}
+								href="{{module.nbviewer_link}}"
+							{% else %}
+								href="javascript:alert('No Nbviewer link!')"
+							{% endif %}>
 							<i class="fas fa-paperclip"></i> Nbviewer
 						</a>
 						<a
 							class="btn btn-primary" 
 							tabindex="0"
-							role="button" 
-							data-toggle="popover" 
-							data-trigger="focus" 
-							title="Github" 
-							data-content="And here's some amazing content. It's very engaging. Right?">
+							{% if module.bindr_link %}
+								href="{{module.bindr_link}}"
+							{% else %}
+								href="javascript:alert('No Bindr link!')"
+							{% endif %}>
 							<i class="fas fa-book"></i> Bindr
 						</a>
 					</div>
@@ -92,7 +92,5 @@
 	<!-- End Content -->
 
 	{% include footer.html %}
-	<!-- Custom JS -->
-	<script src="static/javascripts/index.js"></script>
 </body>
 </html>
