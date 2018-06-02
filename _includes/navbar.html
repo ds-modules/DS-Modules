@@ -1,0 +1,76 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top borderless">
+	<a class="navbar-brand" href="../">
+		DS Modules
+	</a>
+	<button class="navbar-toggler borderless" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	
+	<div class="collapse navbar-collapse" id="navbarColor01">
+		<ul class="navbar-nav ml-auto">
+			{% if page.layout == "index" %}
+				<li class="nav-item">
+					<a class="nav-link active" href="../">Home</a>
+				<li class="nav-item">
+					<a class="nav-link" href="../guide">Guide</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../library">Library</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../about">About</a>
+				</li>
+			{% elsif page.layout == "guide" %}
+				<li class="nav-item">
+					<a class="nav-link" href="../">Home</a>
+				<li class="nav-item">
+					<a class="nav-link active" href="../guide">Guide</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../library">Library</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../about">About</a>
+				</li>
+			{% elsif page.layout == "library" %}
+				<li class="nav-item">
+					<a class="nav-link" href="../">Home</a>
+				<li class="nav-item">
+					<a class="nav-link" href="../guide">Guide</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../library">Library</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../about">About</a>
+				</li>
+			{% elsif page.layout == "about" %}
+				<li class="nav-item">
+					<a class="nav-link" href="../">Home</a>
+				<li class="nav-item">
+					<a class="nav-link" href="../guide">Guide</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../library">Library</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../about">About</a>
+				</li>
+			{% else %}
+				<li class="nav-item">
+					<a class="nav-link" href="../">Home</a>
+				<li class="nav-item">
+					<a class="nav-link" href="../guide">Guide</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../library">Library</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../about">About</a>
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+</nav>
+<!-- End of Navbar -->

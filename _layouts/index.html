@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="w-100 h-100">
+
+{% include head.html %}
+
+<body class="w-100 h-100">
+	
+	{% include navbar.html %}
+
+	<!-- Content -->
+	<div class="row mx-auto w-100 mt-5 justify-content-md-center">
+		<div class="col-md-offset-2 col-md-8 mt-5 text-center">
+			<h1><img src="static/images/ds-logo.svg"></h1>
+			<h1 class="display-4">
+				{{ page.title }}
+			</h1>
+			<p>
+				{{ page.content }}
+			</p>
+			<a href="guide"><button type="button" class="btn btn-success">Learn More!</button></a>
+		</div>
+	</div>
+	<div class="mt-5 w-75 jumbotron mx-auto">
+		<h1>Featured Modules</h1>
+		<p class="lead">Some great modules to check out!</p>
+		<hr class="my-4">
+		{% for module in site.featured %}
+		<!-- Featured Module Block -->
+		<div class="card border-info">
+			<div class="row card-body">
+				<!-- Title Column -->
+				<div class="col-md-3">
+					<h4 class="card-title">{{module.title}}</h4>
+					<p class="lead">{{module.course_name}}</p>
+					<p>{{module.instructor}}</p>
+				</div>
+				<!-- Paragraph Column -->
+				<div class="d-flex justify-content-center flex-column col-md-6">
+					<p class="card-text">
+						{{module.content}}
+					</p>
+				</div>
+				<!-- Link Column -->
+				<div class="d-flex justify-content-center flex-column col-md-3">
+					<div class="btn-group-vertical my-3">
+						<a 
+							class="btn btn-primary"
+							tabindex="0" 
+							role="button" 
+							data-toggle="popover"
+							data-trigger="focus" 
+							title="Github" 
+							data-content="And here's some amazing content. It's very engaging. Right?">
+							<i class="fab fa-github"></i> Github
+						</a>
+						<a 
+							class="btn btn-primary" 
+							tabindex="0"
+							role="button" 
+							data-toggle="popover" 
+							data-trigger="focus" 
+							title="Github" 
+							data-content="And here's some amazing content. It's very engaging. Right?">
+							<i class="fas fa-database"></i> Datahub
+						</a>
+						<a 
+							class="btn btn-primary" 
+							tabindex="0"
+							role="button" 
+							data-toggle="popover" 
+							data-trigger="focus" 
+							title="Github" 
+							data-content="And here's some amazing content. It's very engaging. Right?">
+							<i class="fas fa-paperclip"></i> Nbviewer
+						</a>
+						<a
+							class="btn btn-primary" 
+							tabindex="0"
+							role="button" 
+							data-toggle="popover" 
+							data-trigger="focus" 
+							title="Github" 
+							data-content="And here's some amazing content. It's very engaging. Right?">
+							<i class="fas fa-book"></i> Bindr
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<!-- End Content -->
+
+	{% include footer.html %}
+	<!-- Custom JS -->
+	<script src="static/javascripts/index.js"></script>
+</body>
+</html>
