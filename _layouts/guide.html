@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="w-100 h-100">
+
+{% include head.html %}
+
+<body class="w-100 h-100">
+	
+	{% include navbar.html %}
+
+	<!-- Content -->
+	<div class="row w-100 mt-5 px-5 justify-content-center">
+		<div class="col-md-offset-2 col-md-8 mt-5">
+			<h1 class="display-4 mt-5">
+				{{ page.subtitle }}
+			</h1>
+			<div>
+				{{ page.content | markdownify }}
+			</div>
+		</div>
+	</div>
+	<!-- End Content -->
+
+	{% include footer.html %}
+
+	<!-- Custom JS -->
+</body>
+</html>
