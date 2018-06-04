@@ -1,4 +1,4 @@
-#Data Science Modules Website
+# Data Science Modules Website
 ___
 
 Designed and developed by Tony Zhao @([tonyzhao.org](http://tonyzhao.org))
@@ -14,5 +14,5 @@ Designed and developed by Tony Zhao @([tonyzhao.org](http://tonyzhao.org))
 * Use of modified version of Github Widget script
 	- <https://github.com/jawj/github-widget>
 
-##Documentation
+## Documentation
 Typically, the only files that need to be updated/maintained are the `index.md`(homepage), `guide.md`, `library.md`, and `about.md`.
