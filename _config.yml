@@ -25,7 +25,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
 
-destination: doc
+destination: docs
 collections:
   - featured
 
