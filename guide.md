@@ -18,7 +18,7 @@ Modules vary widely and are customized based on each instructor’s objectives a
 
 A module may also include a short introduction to programming. The development team can help instructors prepare to teach the module, and sometimes they can lab-assist in the classroom, too. Learn more by reading a [recent article about modules.](https://data.berkeley.edu/news/data-science-crops-diverse-undergraduate-courses)
 
-### What are the venefits of adding a data science module to a course?
+### What are the benefits of adding a data science module to a course?
 Modules are a great way for students to have a smooth and supported introduction to computing, statistics, and the tools used in data science, which are increasingly relevant across academic disciplines.
 
 Modules empower students to do their own research and pose their own questions using data and enable instructors to apply a new lens to their area of expertise.
