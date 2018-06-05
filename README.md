@@ -20,7 +20,9 @@ Typically, the only files that need to be updated/maintained are the `index.md`(
 
 DO NOT CHANGE THE `docs` FOLDER: It holds the `.html` files for the site, but any changes made in here will be overwritten when jekyll regenerates the site. This folder will be wiped clean and regenerated from the `.md` files everytime. To further understand, read the __How it works__ section of this file.
 
-After making edits to the `.md` files, run `jekyll serve` to host the site locally and see what the changes look like on the site. This command will also rebuild the `docs` folder. If the changes are to be pushed onto the live site, simply stage and and commit everything (including the changes in the `docs` folder MADE BY JEKYLL), and push to origin master.
+Make sure you have installed [Jekyll](https://jekyllrb.com/docs/installation/).
+
+After making edits to the `.md` files, run `jekyll serve` to host the site locally and see what the changes look like on the site. This command will also rebuild the `docs` folder. If the changes are to be pushed onto the live site, simply stage and and commit everything (including the changes in the `docs` folder MADE BY JEKYLL), and push to `origin master`.
 
 ## Home page
 
