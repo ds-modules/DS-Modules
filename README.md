@@ -16,22 +16,31 @@ Designed and developed by Tony Zhao @([tonyzhao.org](http://tonyzhao.org))
 
 ## Documentation
 
+Basic Steps:
+1) Make your edits in the markdown files (`.md`)
+2) Regenerate the site (`jekyll build` or `jekyll serve` if you want to see the site locally as well)
+3) Stage and commit everything (both your changes to the `.md` files and jekyll's changes within `docs` folder)
+4) Push to `origin master`
+5) ???
+6) Profit
+
+
 Typically, the only files that need to be updated/maintained are the `index.md`(homepage), `guide.md`, `library.md`, and `about.md`. Other files that often might be changed are the individual featured modules in `_featured`. Very occaisionally, when site-wide changes need to be made, the `_config.yml` file should be edited. Otherwise, don't change any other files unless you know what you're doing ;).
 
 DO NOT CHANGE THE `docs` FOLDER: It holds the `.html` files for the site, but any changes made in here will be overwritten when jekyll regenerates the site. This folder will be wiped clean and regenerated from the `.md` files everytime. To further understand, read the __How it works__ section of this file.
 
 Make sure you have installed [Jekyll](https://jekyllrb.com/docs/installation/).
 
-After making edits to the `.md` files, run `jekyll serve` to host the site locally and see what the changes look like on the site. This command will also rebuild and overwrite the `docs` folder with the new content. If the changes are to be pushed onto the live site, simply stage and and commit everything (including the changes in the `docs` folder MADE BY JEKYLL), and push to `origin master`. In other words run
+After making edits to the `.md` files, run `jekyll serve` to host the site locally and see what the changes look like on the site by visiting [http://localhost:4000/](http://localhost:4000/). This command will also rebuild and overwrite the `docs` folder with the new content. If the changes are to be pushed onto the live site, simply stage and and commit everything (including the changes in the `docs` folder MADE BY JEKYLL), and push to `origin master`. In other words, to deploy your changes, on the command line run
 
 ```
 jekyll build
 git add *
-git commit -m "this is a commit"
+git commit -m "this is a commit message"
 git push origin master
 ```
 
-If you've made changes and you want to cancel and delete your edits instead.
+If you've made unwanted changes and you want to cancel and delete your edits instead.
 
 ```
 git reset --hard
