@@ -48,15 +48,15 @@ git reset --hard
 
 ## Home page
 
-Documentation will be updated soon
+The corresponding file to be edited is `index.md`. This file itself is pretty simple, having very few variables in the front-matter (header). Very important to note is that the content (stuff below the header) IS NOT rendered in markdown and in plain-text instead. To edit the featured modules portion of this page, see the next section in this README.
 
 ## Featured modules
 
-These individual blocks are found in the `_featured` folder in the root directory. They can be named anything (`3.md`, `a.md`, `linguistics100.md`, `sdf!!!!123_8.md`), but the order in which they are loaded will be alphanumeric.
+These individual blocks are found in the `_featured` folder in the root directory. Each markdown (`.md`) file corresponds to an individual module. They can be named anything (`3.md`, `a.md`, `linguistics100.md`, `sdf!!!!123_8.md`) as long as they are in the `_featured` folder, but the order in which they are loaded will be alphanumeric.
 
 These files have fields in the front-matter (header) which exhaustively include `title`,`course_name`,`instructor`,`github_link`, `datahub_link`,`nbviewer_link`, `bindr_link`. The links should (obviously) be links (`https://example.com`). Any field can be left blank. It just won't show up. The buttons will still be rendered correctly, just no longer having the missing fields.
 
-The content of the file below the header should be the description of the module. This section does not support markdown, and will simply render in plain-text. 
+The content of the file below the header should be the description of the module. This section DOES NOT support markdown, and will simply render in plain-text. 
 
 ## Guide page
 
@@ -77,6 +77,8 @@ Again, very similar to the Guide and Library pages, the corresponding file (`abo
 ## How it works
 
 Jekyll is a framework in the Ruby programming language that allows highly readable markdown to be rendered in nice looking web pages built in HTML/CSS. It does this by taking mardown files (files with the extension`.md`), and formatting them into our HTML templates in the `_layouts` folder.
+
+You may notice that the markdown files have a header that starts and ends with three dashes (---). This is called the front-matter and holds a bunch of variables. The stuff below the header is called the content. This is the main part of the page and is usually, but not always, rendered in markdown. 
 
 Github pages reads from the `docs` folder located at the root directory of the `master` branch. Anything in this folder is reachable via the website. 
 
