@@ -18,23 +18,23 @@ footer_text: Copyright © 2018 Data Science Education Program @ UC Berkeley. All
 
 # Site settings
 title: Data Science Modules
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines
   The official website for all of the modules developed by the Data Science Education Program.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
-
+# DO NOT CHANGE THE DESTINATION
 destination: docs
+
+# DO NOT REMOVE THIS
 collections:
   - featured
 
 # Build settings
 markdown: kramdown
 
+# Files to be excluded from docs
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - _featured/README.md
   - old_site
