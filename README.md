@@ -27,9 +27,9 @@ Basic Steps:
 
 Typically, the only files that need to be updated/maintained are the `index.md`(homepage), `guide.md`, `library.md`, and `about.md`. Other files that often might be changed are the individual featured modules in `_featured`. Very occaisionally, when site-wide changes need to be made, the `_config.yml` file should be edited. Otherwise, don't change any other files unless you know what you're doing ;).
 
-DO NOT CHANGE THE `docs` FOLDER: It holds the `.html` files for the site, but any changes made in here will be overwritten when jekyll regenerates the site. This folder will be wiped clean and regenerated from the `.md` files everytime. To further understand, read the __How it works__ section of this file.
+DO NOT CHANGE THE `docs` FOLDER: It holds the `.html` files for the site, but any changes made in here will be overwritten when Jekyll regenerates the site. This folder will be wiped clean and regenerated from the `.md` files everytime. To further understand, read the __How it works__ section of this file.
 
-Make sure you have installed [Jekyll](https://jekyllrb.com/docs/installation/).
+Make sure you have installed [Jekyll](https://jekyllrb.com/docs/installation/) in order to run Jekyll commands in the terminal.
 
 After making edits to the `.md` files, run `jekyll serve` to host the site locally and see what the changes look like on the site by visiting [http://localhost:4000/](http://localhost:4000/). This command will also rebuild and overwrite the `docs` folder with the new content. If the changes are to be pushed onto the live site, simply stage and and commit everything (including the changes in the `docs` folder MADE BY JEKYLL), and push to `origin master`. In other words, to deploy your changes, on the command line run
 
@@ -80,7 +80,7 @@ Jekyll is a framework in the Ruby programming language that allows highly readab
 
 Github pages reads from the `docs` folder located at the root directory of the `master` branch. Anything in this folder is reachable via the website. 
 
-Jekyll regenerates and builds the files in `docs` from the `.md` files when you run `jekyll build` or `jekyll serve` in the command line. Treat any changs in the `docs` folder as temporary.
+Jekyll regenerates and builds the files in `docs` from the `.md` files when you run `jekyll build` or `jekyll serve` in the command line. Treat `docs` folder as unstable, as any changes made in here will be overwritten and replaced with Jekyll's rendering of the markdown files.
 
 ## Misc
 
