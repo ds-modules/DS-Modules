@@ -72,13 +72,13 @@ Again, very similar to the Guide and Library pages, the corresponding file (`abo
 
 ## Site-wide maintanence (Footer)
 
-`_config.yml` holds all of the site-wide variables. Most of these variables are completely useless, so I put the ones of particular interest at the top. These variables control the links of the footer and the message of the footer. I don't expect this to need to be changed very often.
+`_config.yml` holds all of the site-wide variables. Most of these variables are completely irrelevant, so I put the ones of particular interest at the top. These variables control the links of the footer and the message of the footer. I don't expect this to need to be changed very often.
 
 ## How it works
 
-Jekyll is a framework in the Ruby programming language that allows highly readable markdown to be rendered in nice looking web pages built in HTML/CSS. It does this by taking mardown files (files with the extension`.md`), and formatting them into our HTML templates in the `_layouts` folder.
+Jekyll is a framework in the Ruby programming language that allows highly readable markdown to be rendered in nice looking (but not so readable) web pages built in HTML/CSS. It does this by taking markdown files (files with the extension`.md`), and formatting them into our HTML templates in the `_layouts` folder.
 
-You may notice that the markdown files have a header that starts and ends with three dashes (---). This is called the front-matter and holds a bunch of variables. The stuff below the header is called the content. This is the main part of the page and is usually, but not always, rendered in markdown. 
+You may notice that the markdown files have a header that starts and ends with three dashes (`---`). This is called the front-matter and holds a bunch of variables. The stuff below the header is called the content. This is the main part of the page and is usually, but not always, rendered in markdown. 
 
 Github pages reads from the `docs` folder located at the root directory of the `master` branch. Anything in this folder is reachable via the website. 
 
