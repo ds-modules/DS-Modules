@@ -54,7 +54,7 @@ The corresponding file to be edited is `index.md`. This file itself is pretty si
 
 These individual blocks are found in the `_featured` folder in the root directory. Each markdown (`.md`) file corresponds to an individual module. They can be named anything (`3.md`, `a.md`, `linguistics100.md`, `sdf!!!!123_8.md`) as long as they are in the `_featured` folder, but the order in which they are loaded will be alphanumeric.
 
-These files have fields in the front-matter (header) which exhaustively include `title`,`course_name`,`instructor`,`github_link`, `datahub_link`,`nbviewer_link`, `bindr_link`. The links should (obviously) be links (`https://example.com`). Any field can be left blank. It just won't show up. The buttons will still be rendered correctly, just no longer having the missing fields.
+These files have fields in the front-matter (header) which exhaustively include `title`,`course_name`,`instructor`,`github_link`, `datahub_link`,`nbviewer_link`, `binder_link`. The links should (obviously) be links (`https://example.com`). Any field can be left blank. It just won't show up. The buttons will still be rendered correctly, just no longer having the missing fields.
 
 The content of the file below the header should be the description of the module. This section DOES NOT support markdown, and will simply render in plain-text. 
 
